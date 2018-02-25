@@ -52,9 +52,10 @@ def forward(f, bot, update):
         chat_name = update.message.chat.title
     bot.send_message(
         chat_id=my_chat_id,
-        text="{} ({}): {}".format(
+        text="{} ({}, {}): {}".format(
             update.message.from_user.first_name,
             chat_name,
+            update.message.chat.id,
             update.message.text))
     replies = f(bot, update)
     if isinstance(replies, collections.Iterable):

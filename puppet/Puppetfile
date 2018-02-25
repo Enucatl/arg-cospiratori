@@ -1,0 +1,11 @@
+moduledir "/etc/puppetlabs/code/modules/"
+
+mod "minimum_security", :git => "https://github.com/enucatl/minimum_security"
+mod 'maestrodev-wget', '1.7.3'
+mod 'puppetlabs-apt', '4.5.1'
+mod 'puppet-unattended_upgrades', '3.1.0'
+mod 'justinclayton-sudo', '1.1.0'
+mod 'saz-ssh', '3.0.1'
+mod 'attachmentgenie-ufw', '1.4.9'
+mod "puppetlabs/concat"
+mod "puppetlabs/stdlib"

@@ -124,6 +124,14 @@ OFLGU210
 
 
 @forward
+def oflgu210(bot, update):
+    return update.message.reply_photo(
+        open("photo_2018-02-25_15-06-10.jpg", "rb"),
+        quote=False
+    )
+
+
+@forward
 def anni(bot, update):
     return update.message.reply_photo(
         open("abulafia.png", "rb"),

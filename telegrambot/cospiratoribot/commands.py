@@ -98,6 +98,17 @@ delfini, gazze, oro
 
 
 @forward
+def abulafia(bot, update):
+    return update.message.reply_text(
+        text="""
+Sediento de saber lo que Dios sabe,
+Judá León se dio a permutaciones de letras
+y complejas variaciones
+y al fin pronunció el Nombre que es la Clave
+        """)
+
+
+@forward
 def lenozzedifigaro(bot, update):
     return update.message.reply_text(
         text="5 * 20 * 36 *")

@@ -117,7 +117,7 @@ def borges(bot, update):
 @forward
 def mozart(bot, update):
     r = update.message.reply_audio(
-        open("cinque.mp3", "rb"),
+        open("delfinigazzeoro.mp3", "rb"),
     )       
     return r
 

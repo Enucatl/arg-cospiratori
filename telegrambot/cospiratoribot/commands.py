@@ -109,6 +109,12 @@ y al fin pronunció el Nombre que es la Clave
 
 
 @forward
+def borges(bot, update):
+    return update.message.reply_text(
+        text="If you torture words enough, they'll confess to anything.")
+
+
+@forward
 def lenozzedifigaro(bot, update):
     return update.message.reply_text(
         text="5 * 20 * 36 *")

@@ -29,6 +29,7 @@ def main(v):
     updater.dispatcher.add_handler(CommandHandler('cosifantutte', cc.cosifantutte))
     updater.dispatcher.add_handler(CommandHandler('crocedoriente', cc.croce_oriente))
     updater.dispatcher.add_handler(CommandHandler('abulafia', cc.abulafia))
+    updater.dispatcher.add_handler(CommandHandler('borges', cc.borges))
     updater.dispatcher.add_handler(CommandHandler('dovesono', cc.dovesono))
     updater.dispatcher.add_handler(CommandHandler('dovesiamo', cc.dovesiamo))
     updater.dispatcher.add_handler(CommandHandler('oflgu210', cc.oflgu210))

@@ -115,6 +115,20 @@ def borges(bot, update):
 
 
 @forward
+def mozart(bot, update):
+    r1 = update.message.reply_audio(
+        open("cosifantutte-saper-mentire.mp3", "rb"),
+    )       
+    r2 = update.message.reply_audio(
+        open("madamina.mp3", "rb"),
+    )       
+    r3 = update.message.reply_audio(
+        open("cinque.mp3", "rb"),
+    )       
+    return [r1, r2, r3]
+
+
+@forward
 def lenozzedifigaro(bot, update):
     return update.message.reply_text(
         text="5 * 20 * 36 *")

@@ -33,6 +33,7 @@ def main(v):
     updater.dispatcher.add_handler(CommandHandler('dovesono', cc.dovesono))
     updater.dispatcher.add_handler(CommandHandler('dovesiamo', cc.dovesiamo))
     updater.dispatcher.add_handler(CommandHandler('oflgu210', cc.oflgu210))
+    updater.dispatcher.add_handler(CommandHandler('mozart', cc.mozart))
     updater.dispatcher.add_handler(CommandHandler('15240100103043', cc.opera_solved))
     updater.dispatcher.add_handler(
         MessageHandler(

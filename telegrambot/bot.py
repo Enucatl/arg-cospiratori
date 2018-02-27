@@ -31,6 +31,7 @@ def main(v):
     updater.dispatcher.add_handler(CommandHandler('abulafia', cc.abulafia))
     updater.dispatcher.add_handler(CommandHandler('borges', cc.borges))
     updater.dispatcher.add_handler(CommandHandler('sbahn', cc.sbahn))
+    updater.dispatcher.add_handler(CommandHandler('ichbineinberliner', cc.ichbin))
     updater.dispatcher.add_handler(CommandHandler('magdalena', cc.magdalena))
     updater.dispatcher.add_handler(CommandHandler('dovesono', cc.dovesono))
     # updater.dispatcher.add_handler(CommandHandler('dovesiamo', cc.dovesiamo))

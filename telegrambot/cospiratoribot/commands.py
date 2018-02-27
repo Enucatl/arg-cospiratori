@@ -98,6 +98,13 @@ delfini, gazze, oro
 
 
 @forward
+def ichbin(bot, update):
+    return update.message.reply_text(
+        text="eh ... dovesei ????")
+
+
+
+@forward
 def id_max(bot, update):
     return update.message.reply_text(
         text="non conosco l'identità segreta... è nella lista dei cospiratori ricercati")

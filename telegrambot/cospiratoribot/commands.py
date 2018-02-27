@@ -169,9 +169,10 @@ def anni(bot, update):
 def croce_oriente(bot, update):
     return update.message.reply_text(
         """
-dove sei?
 portami ai piedi
 della croce d'oriente
+
+dovesono?
         """
     )
     
@@ -218,15 +219,15 @@ def dovesono(bot, update):
         r3 = update.message.reply_text(
             "Impossibile rintracciare l'agente {}".format(ids[chosen]))
         replies.append(r3)
-    if (update.message.from_user.id == ids["Massimo"]
-        and ids["Massimo"] in position_dictionary):
+    if (update.message.from_user.id == ids[chosen]
+        and chosen in position_dictionary):
         ostkreuz = {
             "lat": 52.503267,
             "lon": 13.469323
         }
         d = distance(
-            position_dictionary[ids["Massimo"]]["lat"],
-            position_dictionary[ids["Massimo"]]["lon"],
+            position_dictionary[chosen]["lat"],
+            position_dictionary[chosen]["lon"],
             ostkreuz["lat"],
             ostkreuz["lon"])
         r1 = update.message.reply_text(
@@ -240,7 +241,7 @@ def dovesono(bot, update):
             replies.append(r2)
     else:
         r3 = update.message.reply_text(
-            "Impossibile rintracciare l'agente {}".format(ids["Matteo"]))
+            "Impossibile rintracciare l'agente {}".format(chosen))
     return replies
 
 

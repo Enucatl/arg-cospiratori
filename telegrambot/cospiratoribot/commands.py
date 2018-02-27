@@ -260,9 +260,14 @@ def dovesono(bot, update):
 
 @forward
 def dovesiamo(bot, update):
-    check_positions_in_last_hour()
-    total_distance = 0
     replies = []
+    deleted_keys = check_positions_in_last_hour()
+    for key in deleted_keys:
+        r = update.message.reply_text(
+            "agente {} disperso".format(key),
+            quote=False)
+        replies.append(r)
+    total_distance = 0
     for target in targets:
         if not target in position_dictionary:
             update.message.reply_text(
@@ -308,6 +313,9 @@ def update_latest_positions(bot, update):
 
 
 def check_positions_in_last_hour():
+    deleted_keys = []
     for key, value in position_dictionary.items():
         if (value["timestamp"] - datetime.datetime.now()).total_seconds() > 3600:
             del position_dictionary[key]
+            deleted_keys.append(key)
+    return deleted_keys

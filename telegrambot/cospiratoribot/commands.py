@@ -286,18 +286,20 @@ def dovesiamo(bot, update):
             "agente {} disperso".format(key),
             quote=False)
         replies.append(r)
-    total_distance = 9999
+    total_distance = 0
     for target in targets:
         if not target in position_dictionary:
-            update.message.reply_text(
+            r = update.message.reply_text(
                 "Impossibile localizzare l'agente {}".format(target))
-            return
+            replies.append(r)
         else:
             total_distance += distance(
                 position_dictionary[target]["lat"],
                 position_dictionary[target]["lon"],
                 targets[target]["lat"],
                 targets[target]["lon"])
+    if total_distance == 0:
+        total_distance = 9999
     r1 = update.message.reply_text(
         "{:.2f} km".format(total_distance),
         quote=False)
@@ -307,6 +309,7 @@ def dovesiamo(bot, update):
             "https://www.youtube.com/watch?v=04854XqcfCY",
             quote=False)
         replies.append(r2)
+    print("REPLIES", replies)
     return replies
 
 

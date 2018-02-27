@@ -98,6 +98,25 @@ delfini, gazze, oro
 
 
 @forward
+def id_max(bot, update):
+    return update.message.reply_text(
+        text="non conosco l'identità segreta... è nella lista dei cospiratori ricercati")
+
+
+
+@forward
+def cospiratori(bot, update):
+    return update.message.reply_text(
+        text="""
+🇨🇭 = 85010254, 45006035
+🇫🇷 = 127145721
+🇩🇪 = 82200874
+🇮🇹 = 85218517
+        """)
+
+
+
+@forward
 def abulafia(bot, update):
     return update.message.reply_text(
         text="""

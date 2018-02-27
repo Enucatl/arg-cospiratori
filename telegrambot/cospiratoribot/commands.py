@@ -311,7 +311,6 @@ def dovesiamo(bot, update):
             "https://www.youtube.com/watch?v=04854XqcfCY",
             quote=False)
         replies.append(r2)
-    print("REPLIES", replies)
     return replies
 
 

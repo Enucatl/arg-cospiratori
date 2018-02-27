@@ -261,7 +261,7 @@ def dovesono(bot, update):
             ostkreuz["lat"],
             ostkreuz["lon"])
         r1 = update.message.reply_text(
-            "{} km".format(d),
+            "{:.2f} km".format(d),
             quote=False)
         replies.append(r1)
         if d < 0.2:
@@ -298,7 +298,7 @@ def dovesiamo(bot, update):
                 targets[target]["lat"],
                 targets[target]["lon"])
     r1 = update.message.reply_text(
-        "{} km".format(total_distance),
+        "{:.2f} km".format(total_distance),
         quote=False)
     replies.append(r1)
     if total_distance < 0.5:

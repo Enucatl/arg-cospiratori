@@ -115,11 +115,26 @@ def borges(bot, update):
 
 
 @forward
+def sbahn(bot, update):
+    r = update.message.reply_audio(
+        open("sound.m4a", "rb"),
+    )       
+    return r
+
+
+@forward
 def mozart(bot, update):
     r = update.message.reply_audio(
         open("delfinigazzeoro.mp3", "rb"),
     )       
     return r
+
+
+@forward
+def magdalena(bot, update):
+    return update.message.reply_text(
+        text="non ho tempo per queste cose, devo incontrarmi con l'agente
+        {}".format(ids["Massimo"]))
 
 
 @forward

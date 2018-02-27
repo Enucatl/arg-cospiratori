@@ -315,7 +315,7 @@ def update_latest_positions(bot, update):
 def check_positions_in_last_hour():
     deleted_keys = []
     for key, value in position_dictionary.items():
-        if (value["timestamp"] - datetime.datetime.now()).total_seconds() > 3600:
+        if (value["timestamp"] - datetime.datetime.now()).total_seconds() > 900:
             del position_dictionary[key]
             deleted_keys.append(key)
     return deleted_keys

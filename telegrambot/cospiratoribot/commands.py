@@ -309,7 +309,7 @@ https://drive.google.com/file/d/1T6draZOFndn8yx5-L8wTm_dZUjIsdqXd/view?usp=shari
 """.format(total_distance),
         quote=False)
     replies.append(r1)
-    if total_distance < 0.5 and target_count == 5:
+    if total_distance < 0.3 and target_count == 5:
         r2 = update.message.reply_text(
             "https://www.youtube.com/watch?v=04854XqcfCY",
             quote=False)

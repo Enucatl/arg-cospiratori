@@ -150,6 +150,13 @@ OFLGU210
 
 
 @forward
+def mozartlaugh(bot, update):
+    return update.message.reply_video(
+        open("mozart.mp4", "rb")
+    )
+
+
+@forward
 def oflgu210(bot, update):
     return update.message.reply_photo(
         open("photo_2018-02-25_15-06-10.jpg", "rb"),

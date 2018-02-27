@@ -10,8 +10,8 @@ def main(chat_id):
     token = os.environ["TOKEN"]
     print(chat_id)
     updater = Updater(token)
-    updater.bot.send_message(
-        text="anni 🇮🇹 🇫🇷 ***",
+    updater.bot.send_audio(
+        audio=open("sound.m4a", "rb"),
         chat_id=chat_id)
 
 

@@ -185,7 +185,7 @@ def croce_oriente(bot, update):
 portami ai piedi
 della croce d'oriente
 
-dovesono?
+dovesono ?
         """
     )
     

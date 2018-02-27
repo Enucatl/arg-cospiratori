@@ -34,7 +34,7 @@ def main(v):
     updater.dispatcher.add_handler(CommandHandler('ichbineinberliner', cc.ichbin))
     updater.dispatcher.add_handler(CommandHandler('magdalena', cc.magdalena))
     updater.dispatcher.add_handler(CommandHandler('dovesono', cc.dovesono))
-    # updater.dispatcher.add_handler(CommandHandler('dovesiamo', cc.dovesiamo))
+    updater.dispatcher.add_handler(CommandHandler('dovesiamo', cc.dovesiamo))
     updater.dispatcher.add_handler(CommandHandler('ostkreuz', cc.ostkreuz))
     updater.dispatcher.add_handler(CommandHandler('82200874', cc.id_max))
     updater.dispatcher.add_handler(CommandHandler('cospiratori', cc.cospiratori))

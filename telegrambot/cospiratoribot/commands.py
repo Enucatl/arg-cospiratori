@@ -225,36 +225,13 @@ def dovesono(bot, update):
         replies.append(r1)
         if d < 0.2:
             r2 = update.message.reply_photo(
-                open("pillars-1200x480.jpg.1", "rb"),
+                open("dovesiamo.jpg", "rb"),
                 quote=False)
             replies.append(r2)
     else:
         r3 = update.message.reply_text(
             "Impossibile rintracciare l'agente {}".format(ids[chosen]))
         replies.append(r3)
-    if (update.message.from_user.id == ids[chosen]
-        and chosen in position_dictionary):
-        ostkreuz = {
-            "lat": 52.503267,
-            "lon": 13.469323
-        }
-        d = distance(
-            position_dictionary[chosen]["lat"],
-            position_dictionary[chosen]["lon"],
-            ostkreuz["lat"],
-            ostkreuz["lon"])
-        r1 = update.message.reply_text(
-            "{%.1f} km".format(d),
-            quote=False)
-        replies.append(r1)
-        if d < 0.2:
-            r2 = update.message.reply_photo(
-                open("pillars-1200x480.jpg.1", "rb"),
-                quote=False)
-            replies.append(r2)
-    else:
-        r3 = update.message.reply_text(
-            "Impossibile rintracciare l'agente {}".format(chosen))
     return replies
 
 

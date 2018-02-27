@@ -230,7 +230,7 @@ def dovesono(bot, update):
             replies.append(r2)
     else:
         r3 = update.message.reply_text(
-            "Impossibile rintracciare l'agente {}".format(ids[chosen]))
+            "Impossibile localizzare l'agente {}".format(ids[chosen]))
         replies.append(r3)
     return replies
 
@@ -248,7 +248,7 @@ def dovesiamo(bot, update):
     for target in targets:
         if not target in position_dictionary:
             update.message.reply_text(
-                "Impossibile rintracciare l'agente {}".format(target))
+                "Impossibile localizzare l'agente {}".format(target))
             return
         else:
             total_distance += distance(

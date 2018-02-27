@@ -129,6 +129,12 @@ def lenozzedifigaro(bot, update):
 
 
 @forward
+def ostkreuz(bot, update):
+    return update.message.reply_text(
+        text="ma dovesei ?")
+
+
+@forward
 def dongiovanni(bot, update):
     return update.message.reply_text(
         text="91 100 231 640 1003")

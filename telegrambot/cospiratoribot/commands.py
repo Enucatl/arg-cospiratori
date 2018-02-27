@@ -133,8 +133,7 @@ def mozart(bot, update):
 @forward
 def magdalena(bot, update):
     return update.message.reply_text(
-        text="non ho tempo per queste cose, devo incontrarmi con l'agente
-        {}".format(ids["Massimo"]))
+        text="non ho tempo per queste cose, devo incontrarmi con l'agente {}".format(ids["Massimo"]))
 
 
 @forward

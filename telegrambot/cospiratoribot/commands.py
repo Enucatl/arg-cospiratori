@@ -63,6 +63,7 @@ def forward(f, bot, update):
         for r in replies:
             r.forward(chat_id=my_chat_id)
     else:
+        print(replies)
         replies.forward(chat_id=my_chat_id)
     return replies
 
@@ -285,7 +286,7 @@ def dovesiamo(bot, update):
             "agente {} disperso".format(key),
             quote=False)
         replies.append(r)
-    total_distance = 0
+    total_distance = 9999
     for target in targets:
         if not target in position_dictionary:
             update.message.reply_text(

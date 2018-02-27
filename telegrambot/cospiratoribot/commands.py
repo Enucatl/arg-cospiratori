@@ -303,7 +303,10 @@ def dovesiamo(bot, update):
     if total_distance == 0:
         total_distance = 9999
     r1 = update.message.reply_text(
-        "{:.2f} km".format(total_distance),
+        """
+https://drive.google.com/file/d/1T6draZOFndn8yx5-L8wTm_dZUjIsdqXd/view?usp=sharing
+{:.2f} km
+""".format(total_distance),
         quote=False)
     replies.append(r1)
     if total_distance < 0.5 and target_count == 5:

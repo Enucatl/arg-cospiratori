@@ -11,7 +11,7 @@ def main(chat_id):
     print(chat_id)
     updater = Updater(token)
     updater.bot.send_message(
-        text="https://drive.google.com/file/d/1T6draZOFndn8yx5-L8wTm_dZUjIsdqXd/view?usp=sharing",
+        text="",
         chat_id=chat_id)
 
 
